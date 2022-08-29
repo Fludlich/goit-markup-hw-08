@@ -1,0 +1,32 @@
+.about{
+  padding-bottom: 0;
+  
+  &__list {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    gap: 30px;
+  }
+  &__background{
+    background-color: var(--fill-space-color);
+    padding: 25px 100px 15px;
+    margin-bottom: 30px;
+    }
+  &__title {
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--tytle-text-color);
+    }
+    &__icon{
+      height: 70px;
+      width: 70px;
+    }
+    
+}
+
+  
+  

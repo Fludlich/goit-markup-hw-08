@@ -1,0 +1,57 @@
+.checkbox{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  color: var(--border-check-color);
+  
+  font-size: 14px;
+  line-height: 2;
+
+    & a{
+    
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      
+        color: var(--text-link-color);
+        margin-left: 5px;
+      }
+      &__area{
+        position: relative;
+        display: flex;
+        justify-content: center;
+      align-items: center;
+      margin-right: 7px;
+      }
+      &__properties{
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      
+        appearance: none;
+        border: 2px solid var(--border-color);
+        border-radius: 20%;
+        width: 16px;
+        height: 15px;
+        &:checked {
+          border: transparent;
+          background-color: var(--accent-color);
+        }
+    
+      }
+      
+      &__icon{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        fill: var(--primary-white-color);
+        border-radius: 20%;
+        
+      }
+    }

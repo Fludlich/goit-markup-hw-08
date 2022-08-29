@@ -1,0 +1,71 @@
+.survey{
+    display: flex;
+    flex-direction: column;
+    &__item{
+        display: block;
+        
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+      color: ver(--border-check-color);
+      
+        margin-top: 10px;
+        margin-bottom: 4px;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      &__icon-area{
+      position: relative;
+      }
+      &__data-user{
+        padding: 11px 42px;
+        width: 100%;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      &__icon{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        left:15px;
+      
+      }
+      
+     
+      &__data-user:focus{
+        border: 1px solid var(--accent-color);
+        outline: none;
+      }
+      &__icon-area:focus-within{
+        fill:var(--accent-color);
+      }
+      
+      &__textarea{
+        display: block;
+        resize: none;
+        border-radius: 4px;
+        height: 120px;
+        width: 100%;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 12px 16px;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &::placeholder{
+          color: var(-placeholder-color);
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        
+        }
+        &:focus{
+          border: 1px solid var(--accent-color);
+          outline: none;
+        }
+      
+      }
+      
+      
+  }
