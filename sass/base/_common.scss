@@ -7,6 +7,10 @@ body {
   .is-hidden{
     opacity: 0;
     pointer-events: none;
+    
+  }
+  .no-scroll{
+    overflow: hidden;
   }
   .visually-hidden {
     position: absolute;
@@ -26,6 +30,7 @@ body {
   }
   .list {
     list-style: none;
+    padding: 0%;
   }
   img {
     display: block;

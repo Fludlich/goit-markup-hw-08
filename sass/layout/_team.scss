@@ -1,20 +1,44 @@
 .team {
     background-color: var(--fill-space-color);
+    padding: 60px 0;
+    @include desktop{
+      padding: 94px 0;
+     }
     &__title {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+      @include desktop{
+        margin-bottom: 50px;
+       }
     }
     &__list {
       display: flex;
       margin: 0%;
       padding: 0%;
       gap: 30px;
+      @include mobile{
+        flex-direction: column;
+      }
+      @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
     }
     &__item {
-      padding-bottom: 30px;
+      padding-bottom: 24px;
       background: var(--primary-white-color);
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
+      @include mobile{
+        width: 100%;
+      }
+      @include tablet{
+        width: calc((100% - 30px)/2);
+      }
+      @include desktop{
+        width: calc((100% - 90px)/4 );
+        padding-bottom: 30px;
+       }
     }
     &__user {
       margin: 50px 0 10px 0;
@@ -34,6 +58,7 @@
       text-align: center;
       letter-spacing: 0.03em;
     }
+    
   }
   
  

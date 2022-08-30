@@ -1,3 +1,5 @@
+
+@import "./utils/mixins";
 @import "./utils/fonts";
 @import "./utils/vars";
 
@@ -13,6 +15,8 @@
 @import "./components/soc";
 @import "./components/checkbox";
 @import "./components/survey";
+@import "./components/mobile-nav";
+@import "./components/follow";
 
 
 @import "./layout/header";

@@ -29,6 +29,12 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
-
+    @include mobile{
+      display: none;
+    }
+    @include desktop{
+      display: inherit;
+      padding-top: 0%;
+     }
   }
  
