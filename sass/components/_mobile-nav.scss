@@ -1,18 +1,19 @@
 .mobile{
-    position: fixed;
+    position: absolute;
     top: 0%;
     left: 0%;
     background-color: #fff;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 48px 40px;
+    z-index: 1;
     &__button-close{
         position: absolute;
-        right: 25px;
-        top: 21px;
+        right: 15px;
+        top: 10px;
         background-color: #fff;
         padding: 0%;
         border: none;
@@ -35,50 +36,50 @@
     &__nav-list{
         padding: 0;
         margin: 0%;
-
     }
     &__nav-item{
-        & + &{
+        &+&{
             margin-top: 32px;
         }
-       
     }
     &__nav-link{
         color: var(--tytle-text-color);
         &:hover,
         &:focus{
-            color: var(--accent-color);
-            font-size: 40px;
-            line-height: 1.17;
-            text-align: center;
-            letter-spacing: 0.02em;
             padding: 3px;
+            color: var(--accent-color);
         }
     }
     // &__connect{
        
     // }
     &__connect-list{
+        margin: 0%;
         display: flex;
         flex-direction: column-reverse;
-        margin: 0%;
         gap: 32px;
     }
-    &__connect-item{
-      
+    // &__connect-item{
+    //     margin-bottom: 32px;
+    //     &:last-child{
+    //         margin-bottom: 0;
+    //     }
+    // }
+    &__connect-mail{
+    
+        font-weight: 500;
         font-size: 24px;
         line-height: 1.16;
         letter-spacing: 0.02em;
-        
-    }
-    &__connect-mail{
-        color: var(--primary-text-color);
+
+        color: var(--primari-text-color);
     }
     &__connect-phone{
-        
+        font-weight: 500;
         font-size: 34px;
         line-height: 1.17;
         letter-spacing: 0.02em;
+
         color: var(--accent-color);
     }
     &__social{
@@ -92,8 +93,6 @@
     }
     &__social-item{
         border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-        ;
         font-weight: 500;
         font-size: 18px;
         line-height: 1.22;

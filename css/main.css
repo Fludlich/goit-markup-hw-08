@@ -46,6 +46,16 @@ body {
   pointer-events: none;
 }
 
+.is-hiddenn {
+  transform: translateX(100%);
+  transition: 2s;
+}
+
+.is-add {
+  transform: translateX(0%);
+  transition: 2s;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -126,7 +136,7 @@ button {
   padding: 0;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
@@ -239,6 +249,9 @@ button {
   border: none;
   background-color: #fff;
   padding: 0%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 @media screen and (min-width: 768px) {
   .mobile__button {
@@ -470,21 +483,22 @@ button {
 }
 
 .mobile {
-  position: fixed;
+  position: absolute;
   top: 0%;
   left: 0%;
   background-color: #fff;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
+  z-index: 1;
 }
 .mobile__button-close {
   position: absolute;
-  right: 25px;
-  top: 21px;
+  right: 15px;
+  top: 10px;
   background-color: #fff;
   padding: 0%;
   border: none;
@@ -513,28 +527,24 @@ button {
   color: var(--tytle-text-color);
 }
 .mobile__nav-link:hover, .mobile__nav-link:focus {
-  color: var(--accent-color);
-  font-size: 40px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.02em;
   padding: 3px;
+  color: var(--accent-color);
 }
 .mobile__connect-list {
+  margin: 0%;
   display: flex;
   flex-direction: column-reverse;
-  margin: 0%;
   gap: 32px;
 }
-.mobile__connect-item {
+.mobile__connect-mail {
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
-}
-.mobile__connect-mail {
-  color: var(--primary-text-color);
+  color: var(--primari-text-color);
 }
 .mobile__connect-phone {
+  font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -654,11 +664,15 @@ button {
 .header {
   border-bottom: 1px solid #ececec;
 }
+@media screen and (min-width: 320px) {
+  .header {
+    position: relative;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 0 16px 0;
+  padding: 16px 0 16px 15px;
 }
 @media screen and (min-width: 768px) {
   .header__container {

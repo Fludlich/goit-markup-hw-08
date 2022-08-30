@@ -9,6 +9,14 @@ body {
     pointer-events: none;
     
   }
+  .is-hiddenn{
+    transform: translateX(100%);
+    transition: 2s;
+  }
+  .is-add{
+    transform: translateX(0%);
+    transition: 2s;
+  }
   .no-scroll{
     overflow: hidden;
   }
