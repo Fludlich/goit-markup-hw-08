@@ -1,8 +1,9 @@
 .header {
   
-  // @include mobile{
-  //   position: relative;
-  // }
+  @include mobile{
+    position: relative;
+    overflow: hidden;
+  }
     border-bottom: 1px solid #ececec;
     &__container{
       display: flex;
