@@ -41,14 +41,15 @@
         &+&{
             margin-top: 32px;
         }
+       
     }
     &__nav-link{
         color: var(--tytle-text-color);
-        &:hover,
-        &:focus{
+        &--active{
             padding: 3px;
             color: var(--accent-color);
         }
+       
     }
     &__connect-list{
         margin: 0%;
@@ -67,11 +68,14 @@
     }
     &__connect-phone{
         font-weight: 500;
-        font-size: 34px;
+        font-size: 27px;
         line-height: 1.17;
         letter-spacing: 0.02em;
 
         color: var(--accent-color);
+        @media screen and (min-width:480px){
+            font-size: 34px;
+        }
     }
     &__social{
         margin-top: 64px;
@@ -79,7 +83,7 @@
     &__social-list{
         display: flex;
         flex-wrap: wrap;
-        
+        margin: 0%;
         
     }
     &__social-item{
@@ -90,12 +94,11 @@
         letter-spacing: 0.02em;
         // padding: 0 10px;
         padding-right: 10px;
+        margin-right: 10px;
+        
         color: var(--accent-color);
         &:last-child{
             border-right: none;
-        }
-        & + &{
-            padding-left: 10px;
         }
         &:last-child{
             padding-right: 0;
