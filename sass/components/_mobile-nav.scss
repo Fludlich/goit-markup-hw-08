@@ -11,8 +11,8 @@
     padding: 48px 40px;
     z-index: 1;
     animation-name: rotator;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1500ms;
+    animation-delay: 0ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     animation-fill-mode: backwards;
     animation-iteration-count: revert;
@@ -57,21 +57,12 @@
             color: var(--accent-color);
         }
     }
-    // &__connect{
-       
-    // }
     &__connect-list{
         margin: 0%;
         display: flex;
         flex-direction: column-reverse;
         gap: 32px;
     }
-    // &__connect-item{
-    //     margin-bottom: 32px;
-    //     &:last-child{
-    //         margin-bottom: 0;
-    //     }
-    // }
     &__connect-mail{
     
         font-weight: 500;

@@ -491,10 +491,10 @@ button {
   z-index: 1;
   -webkit-animation-name: rotator;
           animation-name: rotator;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-animation-fill-mode: backwards;
@@ -1266,6 +1266,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-height: 609px;
+  min-width: 450px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
