@@ -4,7 +4,10 @@
     position: relative;
     overflow: hidden;
   }
+  &--border{
     border-bottom: 1px solid #ececec;
+  }
+   
     &__container{
       display: flex;
       align-items: center;

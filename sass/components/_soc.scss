@@ -1,6 +1,10 @@
 .social{
+  // @include tablet{
+  //   di
+  // }
     margin: 0 auto;
     &__list{
+      margin: 0%;
       display: flex;
       padding: 0%;
       gap: 10px;
@@ -28,20 +32,8 @@
       display: flex;
       justify-content: center;
     }
-    &__title{
-      text-align: center;
-      margin: 0%;
-      margin-bottom: 20px;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.18;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--primary-white-color);
-      @include desktop{
-        text-align: start;
-       }
-    }
+    
+    
     // &__list-footer{
     //   padding: 0;
     // }
