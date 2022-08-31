@@ -1,7 +1,8 @@
 .header {
-  @include mobile{
-    position: relative;
-  }
+  
+  // @include mobile{
+  //   position: relative;
+  // }
     border-bottom: 1px solid #ececec;
     &__container{
       display: flex;
