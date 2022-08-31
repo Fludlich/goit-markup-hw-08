@@ -62,5 +62,7 @@
         fill: var(--primary-white-color);
         border-radius: 20%;
       }
-    
+    &__text{
+      text-align: start;
+    }
     }

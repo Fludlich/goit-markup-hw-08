@@ -415,6 +415,9 @@ button {
   fill: var(--primary-white-color);
   border-radius: 20%;
 }
+.checkbox__text {
+  text-align: start;
+}
 
 .survey {
   display: flex;
