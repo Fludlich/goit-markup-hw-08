@@ -10,16 +10,20 @@
         align-items: center;
       // }
       @include tablet{
-        gap: 60px 165px;
+        // gap: 60px 165px;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: baseline;
+        padding-left: 76px;
+        padding-right: 89px;
       }
       @include desktop{
         flex-wrap: nowrap;
         gap: 70px;
-        align-items: center;
+        align-items: baseline;
+        padding-left: 0;
+        padding-right: 0;
        }
     }
     
