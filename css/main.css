@@ -197,6 +197,204 @@ button {
   background-color: var(--accent-color);
 }
 
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-radius: 30px;
+  padding: 32px 20px;
+  background-color: yellow;
+  text-align: center;
+  z-index: 2;
+}
+.modal__button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0%;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal__title {
+  margin-top: 0%;
+  padding: 0%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.button--modal:hover + .modal__title {
+  background-color: blue;
+}
+.modal__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.37;
+  padding-left: 12px;
+  margin-bottom: 2px;
+}
+.modal__position {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.modal__position:last-child {
+  margin-bottom: 32px;
+}
+.modal__input {
+  width: 100%;
+  border-radius: 30px;
+  padding: 14px 12px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.modal__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgb(196, 196, 196);
+}
+.modal__input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgb(196, 196, 196);
+}
+.modal__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgb(196, 196, 196);
+}
+.modal__input:focus {
+  border-color: green;
+  outline: none;
+}
+.modal__input:not(:focus):not(:-moz-placeholder-shown):valid {
+  border-color: green;
+}
+.modal__input:not(:focus):not(:-ms-input-placeholder):valid {
+  border-color: green;
+}
+.modal__input:not(:focus):not(:placeholder-shown):valid {
+  border-color: green;
+}
+.modal__input:not(:focus):not(:-moz-placeholder-shown):invalid {
+  border: 1px solid rgb(255, 112, 93);
+}
+.modal__input:not(:focus):not(:-ms-input-placeholder):invalid {
+  border: 1px solid rgb(255, 112, 93);
+}
+.modal__input:not(:focus):not(:placeholder-shown):invalid {
+  border: 1px solid rgb(255, 112, 93);
+}
+.modal__input:required {
+  background-color: green;
+  border: 1px solid black;
+}
+.modal__input:required:invalid {
+  background-color: palevioletred;
+  border: 1px solid yellow;
+}
+.button--modal:active + .modal__input:required:invalid {
+  background-color: palevioletred;
+  border: 1px solid yellow;
+}
+.modal__error {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgb(255, 112, 93);
+  padding-left: 12px;
+  gap: 4px;
+  display: none;
+}
+.modal__input:not(:focus):not(:-moz-placeholder-shown):invalid + .modal__error {
+  display: flex;
+}
+.modal__input:not(:focus):not(:-ms-input-placeholder):invalid + .modal__error {
+  display: flex;
+}
+.modal__input:not(:focus):not(:placeholder-shown):invalid + .modal__error {
+  display: flex;
+}
+.modal__error-text {
+  margin: 0%;
+}
+.modal__img-error {
+  width: 11px;
+  height: 11px;
+}
+.modal__errorr {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  font-size: 111px;
+  line-height: 1.4;
+  color: rgb(255, 112, 93);
+  padding-left: 12px;
+  gap: 4px;
+  display: none;
+}
+.button--modal:active + .modal__errorr {
+  display: flex;
+}
+
+.button {
+  background-color: green;
+  border-radius: 30px;
+  border-color: transparent;
+  padding: 6px 18px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  text-align: right;
+  color: #2c2c2c;
+  display: inline;
+  display: flex;
+}
+.button--modal {
+  padding: 10px 38px;
+  border-color: green;
+  border: 1px solid;
+}
+.button--modal:active + .modal__input:invalid {
+  background-color: green;
+}
+.button__header--tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .button__header--tablet {
+    display: block;
+  }
+}
+.button--follow {
+  max-width: 103px;
+  padding: 11px 22px;
+}
+
+.button--modal:visited + .modal__errorr {
+  background-color: #fff;
+  width: 10px;
+  height: 20px;
+  display: flex;
+}
+
+.validation_type_error input {
+  border: 1px blue solid;
+}
+
 .backdrop {
   position: fixed;
   width: 100%;

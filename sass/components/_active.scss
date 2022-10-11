@@ -14,3 +14,217 @@
   border-radius: 2px;
   background-color:var(--accent-color);
   }
+
+                      // 
+
+
+
+                      .modal{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        border-radius: 30px;
+                        padding: 32px 20px;
+                        background-color: yellow;
+                        text-align: center;
+                        z-index: 2;
+                        &__button{
+                            position: absolute;
+                            top: 16px;
+                            right: 16px;
+                            padding: 0%;
+                        }
+                        &__form{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            
+                        }
+                        &__title{
+                            margin-top: 0%;
+                            padding: 0%;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 1.16;
+                            text-align: center;
+                            margin-bottom: 20px;
+                            .button--modal:hover + &{
+                                background-color: blue;
+                              }
+                        }
+                        &__label{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 1.37;
+                            padding-left: 12px;
+                            margin-bottom: 2px;
+                    
+                            
+                        }
+                        &__position{
+                            position: relative;
+                            width: 100%;
+                            margin-bottom: 24px;
+                            &:last-child{
+                                margin-bottom: 32px;
+                            }
+                        }
+                        &__input{
+                            width: 100%;
+                            border-radius: 30px;
+                            padding: 14px 12px;
+                          
+                            border: 1px solid rgba(18, 18, 18, 0.12);
+                            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+                            
+                            &::placeholder{
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 1.25;
+                                color: rgba(196, 196, 196, 1);
+                            }
+                            &:focus {
+                                border-color: green;
+                                outline: none;
+                              }
+                              &:not(:focus):not(:placeholder-shown):valid {
+                                border-color: green;
+                              }
+                              &:not(:focus):not(:placeholder-shown):invalid {
+                                border: 1px solid rgba(255, 112, 93, 1);
+                              }
+                              // &:not(:required):invalid {
+                              //   border: 3px solid blue;
+                              // }
+                    
+                                &:required{
+                                  background-color: green;
+                                  border: 1px solid black;
+                                }
+                                &:required:invalid {
+                                  background-color: palevioletred;
+                                  border: 1px solid yellow;
+                                }
+                                .button--modal:active + &:required:invalid{
+                                  background-color: palevioletred;
+                                  border: 1px solid yellow;
+                                }
+                    
+                            //   &:not(:focus):invalid + .modal--button:hover{
+                            //     border: 2px solid blue;
+                            // }
+                            // &:not(:focus):invalid + .modal__errorr{
+                            //     display: flex;
+                            // }
+                    
+                    
+                    
+                            // &:not(:required):invalid {
+                            //     border: 5px solid blue;
+                            // }
+                            // &:required:invalid + .button--modal:active{
+                            //     border: 5px solid blue;
+                            // }
+                            // .button--modal:active + &{
+                            //     border: 5px solid blue;
+                            // }
+                            // & + .button--modal:active{
+                            //     background-color: blue;
+                            // }
+                             
+                        }
+                       
+                        
+                       
+                        &__error{
+                            position: absolute;
+                            display: flex;
+                            align-items: baseline;
+                            font-weight: 500;
+                            font-size: 11px;
+                            line-height: 1.4;
+                            color: rgba(255, 112, 93, 1);
+                            padding-left: 12px;
+                            gap: 4px;
+                            display: none;
+                            .modal__input:not(:focus):not(:placeholder-shown):invalid + & {
+                                display: flex;
+                              }
+                            }
+                        
+                        &__error-text{
+                            margin: 0%;
+                        }
+                        &__img-error{
+                            width: 11px;
+                            height: 11px;
+                        }
+                        &__errorr{
+                            position: absolute;
+                            display: flex;
+                            align-items: baseline;
+                            font-weight: 500;
+                            font-size: 111px;
+                            line-height: 1.4;
+                            color: rgba(255, 112, 93, 1);
+                            padding-left: 12px;
+                            gap: 4px;
+                            display: none;
+                          .button--modal:active + &{
+                                display: flex;
+                            }
+                        // .modal__input:not(:focus):not(:placeholder-shown):invalid + & {
+                        //     display: flex;
+                        //   }
+                    
+                        }
+                    
+                    }
+
+
+                    .button {
+                      background-color: green;
+                      border-radius: 30px;
+                      border-color: transparent;
+                      padding: 6px 18px;
+                      font-weight: 500;
+                      font-size: 13px;
+                      line-height: 150%;
+                    
+                      text-align: right;
+                      color: #2c2c2c;
+                      display: inline;
+                      display: flex;
+                        &--modal{
+                           padding: 10px 38px;
+                           border-color:green ;
+                           border: 1px solid;
+                            &:active + .modal__input:invalid {
+                              background-color: green;
+                            
+                            }
+                            
+                    
+                        }
+                         &__header--tablet{
+                           display: none;
+                            @include tablet{
+                                display: block;
+                            }
+                        }
+                        &--follow{
+                            max-width: 103px;
+                            padding: 11px 22px;
+                        }
+                    }
+                    .button--modal:visited + .modal__errorr{
+                        background-color: #fff;
+                        width: 10px;
+                        height: 20px;
+                        display: flex;
+                    }              
+    .validation_type_error input{
+      border: 1px blue solid;
+    }
